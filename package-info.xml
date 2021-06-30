@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<name>506th Rosters</name>
+	<id>506th:Rosters</id>
+	<type>modification</type>
+	<version>0.0.1</version>
+
+	<install for="2.0 - 2.0.99">
+		<database>install.php</database>
+		<modification>install.xml</modification>
+		<require-dir name="Sources" destination="$boarddir" />
+		<redirect url="?action=admin" type="inline">Install completed.</redirect>
+	</install>
+
+	<uninstall for="2.0 - 2.0.99">
+		<code>uninstall.php</code>
+		<modification reverse="true">install.xml</modification>
+		<remove-file name="$sourcedir/Rosters.php" />
+	</uninstall>
+
+</package-info>
